@@ -1,0 +1,47 @@
+#popup-cadastrar {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    min-height: 350px;
+    border: 4px solid #3DB07D;
+    background: radial-gradient(circle, #3DB07D 0%, black 70%);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+#popup-cadastrar .popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#popup-cadastrar h2 {
+    font-size: 1.8rem;
+}
+
+#popup-cadastrar p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#popup-cadastrar .popup-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+#popup-cadastrar .btn-popup {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #3DB07D;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#popup-cadastrar .btn-popup:hover {
+    background-color: #63CEA0;
+}
