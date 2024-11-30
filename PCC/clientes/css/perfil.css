@@ -1,0 +1,68 @@
+/* ------== CSS RESETER ==------ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------== GERAL ==------ */
+
+html, body {
+    height: 100%;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white; 
+}
+
+
+/* ------== CONTEÚDO NO MAIN ==------ */
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+#conteudo {
+    flex-grow: 1;
+    margin-top: 22rem;
+    margin-right: 16rem;
+    margin-left: 20rem;
+    width: auto;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    overflow-y: auto;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    min-height: calc(100vh - 22rem);
+}
+
+.interior {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#conteudo h2 {
+    text-align: center;
+    color: #3DB07D;
+    margin-bottom: 2rem;
+}
+
+#conteudo h3 {
+    text-align: left;
+    color: #3DB07D;
+    margin-top: 1.5rem;
+}
