@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ongs</title>
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/ongs.css">
+</head>
+
+<body>
+
+
+    <!------== HEADER ==------>
+
+    <header>
+        <img id="arvore" width="150rem" height="150rem" alt="árvore" src="../img/arvore.png">
+        <h1 id="PCC">Plataforma de Compensação de Carbono</h1>
+        <div id="vazioheader"></div>
+    </header>
+
+
+    <!------== MAIN ==------>
+
+    <main>
+
+        <div id="menu">
+
+            <img id="foto_perfil" width="150rem" height="150rem" alt="Foto do perfil" src="../img/fotoperfil.png">
+            <p id="nome_menu">Nome do cara</p>
+
+            <nav>
+
+                <ul>
+                    <li><a href="home.html" class="menu-button">Home</a></li>
+                    <li><a href="calculadora.html" class="menu-button">Calculadora</a></li>
+                    <li><a href="ongs.html" class="menu-button">Ongs</a></li>
+                    <li><a href="perfil.html" class="menu-button">Perfil</a></li>
+                </ul>
+
+            </nav>
+
+            <div id="vaziomenu"></div>
+
+        </div>
+    
+        <div id="retangulo"><h1>ONGS</h1></div>
+
+        <div id="conteudo">
+            <!-- Seção de ONGs -->
+            <h2 class="interior">ONGs</h2>
+            <input type="text" id="campo-busca-ongs" placeholder="Procure por nome, cidade ou estado...">
+
+            <button id="botao-voltar-ongs" style="display: none;" onclick="renderizarOngs()">Voltar</button>
+            <div id="cartoes-container-ongs"></div>
+        
+            <!-- Modal para exibir informações da ONG -->
+            <div id="ong-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" onclick="fecharModal()">&times;</span>
+                    <img id="modal-foto-ong" class="modal-foto" src="../img/fotoperfil.png" alt="Foto da ONG">
+                    <h3 id="modal-nome-ong">Nome da ONG</h3>
+                    <p>Cidade: <span id="modal-cidade"></span></p>
+                    <p>Estado: <span id="modal-estado"></span></p>
+                    <p>Email: <span id="modal-email"></span></p>
+                    <p>Telefone: <span id="modal-telefone"></span></p>
+                    <p>Website: <a id="modal-website" href="#" target="_blank">Visitar</a></p>
+        
+                    <div id="modal-fotos-adicionais" class="fotos-adicionais-container">
+                        <!-- Fotos adicionais serão renderizadas aqui -->
+                    </div>
+        
+                    <button id="botao-doacao" class="botao-doacao" onclick="exibirCampoDoacao()">Fazer uma doação</button>
+        
+                    <div id="campo-doacao" style="display: none; margin-top: 1rem;">
+                        <p>Quanto você deseja doar? (R$)</p>
+                        <input type="number" id="valor-doacao" placeholder="Digite o valor" style="width: 100%; margin-bottom: 1rem;">
+                        <button id="confirmar-doacao" class="botao-doacao" onclick="processarDoacao()">Doar</button>
+                        <button id="cancelar-doacao" class="botao-cancelar" onclick="ocultarCampoDoacao()">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                      
+    </main>
+    
+<script src="js/ongs.js"></script>
+    
+</body>
+</html>
