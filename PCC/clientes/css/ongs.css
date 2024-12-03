@@ -1,0 +1,298 @@
+/* ------== CSS RESETER ==------ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------== GERAL ==------ */
+
+html, body {
+    height: 100%;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white; 
+}
+
+
+/* ------== CONTEÚDO NO MAIN ==------ */
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+#conteudo {
+    flex-grow: 1;
+    margin-top: 22rem;
+    margin-right: 16rem;
+    margin-left: 20rem;
+    width: auto;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    overflow-y: auto;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    min-height: calc(100vh - 22rem);
+}
+
+.interior {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#conteudo h2 {
+    text-align: center;
+    color: #3DB07D;
+    margin-bottom: 2rem;
+}
+
+#conteudo h3 {
+    text-align: left;
+    color: #3DB07D;
+    margin-top: 1.5rem;
+}
+
+
+/* ------== ONGS ==------ */
+
+/* Campo de Busca */
+#campo-busca-favoritas,
+#campo-busca-todas {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.3rem;
+}
+
+/* Botão Voltar */
+#botao-voltar-favoritas,
+#botao-voltar-todas {
+    display: none;
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 1rem;
+    background-color: #3DB07D;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+#botao-voltar-favoritas:hover,
+#botao-voltar-todas:hover {
+    background-color: #2a905d;
+}
+
+
+/* Contêiner para ONGs */
+.ongs-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Cartão de ONG */
+.ong-card {
+    background-color: #fff;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover no cartão */
+.ong-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+/* Imagem da ONG */
+.foto-ong {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    border: 0.2rem solid #3DB07D;
+}
+
+/* Nome e Cidade */
+.ong-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.ong-card p {
+    color: #777;
+    font-size: 1rem;
+}
+
+/* Títulos das Seções */
+.interior {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #3DB07D;
+    font-size: 1.5rem;
+}
+
+
+/* ------== ONGS ==------ */
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #3DB07D;
+}
+
+/* Fotos adicionais */
+.fotos-adicionais-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.fotos-adicionais-container img {
+    width: 60px;
+    height: 60px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.fotos-adicionais-container img:hover {
+    transform: scale(1.2);
+}
+
+/* Botão de doação */
+.botao-doacao {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #3DB07D;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-doacao:hover {
+    background-color: #2a905d;
+}
+
+/* Botão cancelar no campo de doação */
+.botao-cancelar {
+    margin-top: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-cancelar:hover {
+    background-color: #c9302c;
+}
+
+/* Campo de digitação para doação */
+#valor-doacao {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    box-sizing: border-box;
+}
+
+/* Campo de busca */
+#campo-busca-ongs {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.3rem;
+    box-sizing: border-box;
+}
+
+/* Botão voltar */
+#botao-voltar-ongs {
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 1rem;
+    background-color: #3DB07D;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    display: none;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#botao-voltar-ongs:hover {
+    background-color: #2a905d;
+}
+
